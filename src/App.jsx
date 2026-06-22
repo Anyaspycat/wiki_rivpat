@@ -1,121 +1,84 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 
+function makeTitle(filename) {
+  return filename
+    .replace(/\.[^/.]+$/, '')
+    .replace(/_/g, ' ')
+    .replace(/\bpaso\b/gi, 'Paso')
+    .split(' ')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeSection, setActiveSection] = useState(null)
+
+  // Cargar todas las imágenes de img_pasos (Vite import.meta.glob)
+  const grouped = useMemo(() => {
+    const modules = import.meta.glob('./assets/img_pasos/**', { eager: true })
+    const groups = {}
+    Object.keys(modules).forEach((p) => {
+      // p example: /src/assets/img_pasos/Paso_A/A_Paso_1.png
+      const parts = p.split('/')
+      const folder = parts[parts.length - 2]
+      const filename = parts[parts.length - 1]
+      const url = modules[p].default
+      if (!groups[folder]) groups[folder] = []
+      groups[folder].push({ url, filename })
+    })
+    // sort keys for stable order
+    const ordered = Object.keys(groups)
+      .sort()
+      .map((k) => ({ section: k, images: groups[k].sort((a, b) => a.filename.localeCompare(b.filename)) }))
+    return ordered
+  }, [])
+
+  useEffect(() => {
+    if (activeSection === null && grouped.length > 0) {
+      setActiveSection(grouped[0].section)
+    }
+  }, [activeSection, grouped])
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Wiki - Windows Server 2025</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="wiki-root">
+      <aside className="wiki-sidebar">
+        <h2>Secciones</h2>
+        <ul>
+          {grouped.map((g) => (
+            <li key={g.section}>
+              <button className={g.section === activeSection ? 'active' : ''} onClick={() => setActiveSection(g.section)}>
+                {g.section}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </aside>
 
-      <div className="ticks"></div>
+      <main className="wiki-main">
+        <header className="wiki-header">
+          <h1>Wiki de pasos</h1>
+          <p>Secciones generadas automáticamente desde <code>src/assets/img_pasos</code></p>
+        </header>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        {grouped.map((g) => (
+          <section key={g.section} className={`wiki-section ${g.section === activeSection ? 'visible' : 'hidden'}`} id={g.section}>
+            <h2>{g.section}</h2>
+            <div className="gallery">
+              {g.images.map((img) => (
+                <figure key={img.filename} className="thumb">
+                  <img src={img.url} alt={img.filename} />
+                  <figcaption>
+                    <strong>{makeTitle(img.filename)}</strong>
+                    <p>Descripción: Imagen automatically generated from filename.</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))}
+      </main>
+    </div>
   )
 }
 

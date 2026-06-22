@@ -182,3 +182,67 @@
     border-right-color: var(--border);
   }
 }
+
+/* Wiki styles */
+.wiki-root {
+  display: flex;
+  gap: 24px;
+  padding: 20px 32px;
+}
+.wiki-sidebar {
+  width: 200px;
+  border-right: 1px solid var(--border);
+  padding-right: 16px;
+}
+.wiki-sidebar h2 {
+  margin-top: 0;
+}
+.wiki-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.wiki-sidebar button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 8px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.wiki-sidebar button.active {
+  background: var(--accent-bg);
+  font-weight: 600;
+}
+.wiki-main {
+  flex: 1 1 auto;
+}
+.wiki-header p {
+  margin-top: 4px;
+  color: var(--muted);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.thumb img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+.thumb figcaption {
+  font-size: 14px;
+  margin-top: 6px;
+}
+.wiki-section.hidden {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .wiki-root { flex-direction: column; }
+  .wiki-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+}
