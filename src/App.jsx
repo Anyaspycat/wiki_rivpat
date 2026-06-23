@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { descripcionesPasos } from './data/descripcionesPasos'
 import { titulosPaso } from './data/titulosPaso'
 import { titulosSecciones } from './data/titulosSecciones'
+import { contenidoSecciones } from './data/contenidoSecciones'
 import './App.css'
 
 function makeTitle(filename) {
@@ -64,12 +65,22 @@ function App() {
       if (!groups[folder]) groups[folder] = []
       groups[folder].push({ url, filename })
     })
-    return Object.keys(groups)
+
+    const result = Object.keys(groups)
       .sort()
       .map((section) => ({
         section,
         images: groups[section].sort((a, b) => naturalSort(a.filename, b.filename)),
       }))
+
+    // Append text-only sections (no images) defined in contenidoSecciones
+    Object.keys(contenidoSecciones || {}).forEach((sec) => {
+      if (!result.find((g) => g.section === sec)) {
+        result.push({ section: sec, images: [] })
+      }
+    })
+
+    return result
   }, [])
 
   useEffect(() => {
@@ -117,8 +128,8 @@ function App() {
   }, [activeSection, grouped])
 
   const activeGroup = grouped.find((group) => group.section === activeSection)
-  const activeIndex = activeGroup ? Math.min(activePhoto.index, activeGroup.images.length - 1) : 0
-  const activeImage = activeGroup?.images[activeIndex] || null
+  const activeIndex = activeGroup ? Math.min(activePhoto.index, Math.max(0, activeGroup.images.length - 1)) : 0
+  const activeImage = activeGroup && activeGroup.images.length > 0 ? activeGroup.images[activeIndex] : null
 
   const changePhoto = (offset) => {
     if (!activeGroup) return
@@ -156,7 +167,16 @@ function App() {
       </aside>
       <main className="main-content">
         <div className="carousel-container">
-          {activeGroup && activeImage ? (
+          {activeGroup && activeGroup.images.length === 0 ? (
+            <div className="text-section" id={activeGroup.section}>
+              <div className="section-label">
+                <span>{getSectionTitle(activeGroup.section)}</span>
+              </div>
+              <div className="text-content">
+                <p>{contenidoSecciones[activeGroup.section]}</p>
+              </div>
+            </div>
+          ) : activeGroup && activeImage ? (
             <div className="carousel-inner" id={activeGroup.section}>
               <div className="carousel-arrows">
                 <button className="carousel-arrow" type="button" onClick={() => changePhoto(-1)} aria-label="Anterior">

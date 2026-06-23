@@ -1,9 +1,10 @@
 export const titulosSecciones = {
-  Paso_0: '1. Introducción',
-  Paso_A: '2. Preparación del Entorno',
-  Paso_B: '3. Descarga e Instalación',
-  Paso_C: '4. Configuración del Disco',
-  Paso_D: '5. Instalación de Windows Server',
-  Paso_E: '6. Ajustes Finales',
-  Paso_F: '7. Verificación y Cierre',
+  Paso_0: '1. Requisitos',
+  Paso_A: '2. Instalacion y Configuracion',
+  Paso_B: '3. Active Directory + DNS',
+  Paso_C: '4. Objetos del dominio',
+  Paso_D: '5. DHCP',
+  Paso_E: '6. Cliente: Incorporación al dominio',
+  Paso_F: '7. Políticas de Grupo',
+  Paso_G: '8. Problemas frecuentes'
 }
