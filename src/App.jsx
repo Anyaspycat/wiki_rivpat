@@ -117,8 +117,8 @@ function App() {
   }
 
   return (
-    <div className="wiki-root">
-      <aside className="wiki-sidebar">
+    <div className="app-layout">
+      <aside className="sidebar">
         <h2>Secciones</h2>
         <ul>
           {grouped.map((group) => (
@@ -134,42 +134,49 @@ function App() {
           ))}
         </ul>
       </aside>
-
-      <main className="wiki-main">
+      <main className="main-content">
         <header className="wiki-header">
-          <h1>Wiki de pasos</h1>
-          <p>
-            Secciones generadas automáticamente desde <code>src/assets/img_pasos</code>. Usa las flechas para recorrer la sección actual.
-          </p>
+          <div className="header-inner">
+            <h1 className="wiki-title">
+              <span>Wiki - Instalación y Configuración</span>
+              <span>Windows Server 2025</span>
+            </h1>
+          </div>
         </header>
 
-        {activeGroup && activeImage ? (
-          <section className="wiki-section visible" id={activeGroup.section}>
-            <div className="carousel-nav">
-              <button className="carousel-arrow" type="button" onClick={() => changePhoto(-1)} aria-label="Anterior">
-                ‹
-              </button>
-              <div className="carousel-labels">
-                <span className="carousel-section">{activeGroup.section}</span>
+        <div className="carousel-container">
+          {activeGroup && activeImage ? (
+            <div className="carousel-inner" id={activeGroup.section}>
+              <div className="carousel-arrows">
+                <button className="carousel-arrow" type="button" onClick={() => changePhoto(-1)} aria-label="Anterior">
+                  ‹
+                </button>
+                <button className="carousel-arrow" type="button" onClick={() => changePhoto(1)} aria-label="Siguiente">
+                  ›
+                </button>
+              </div>
+
+              <div className="step-title">
                 <h2>{makeTitle(activeImage.filename)}</h2>
               </div>
-              <button className="carousel-arrow" type="button" onClick={() => changePhoto(1)} aria-label="Siguiente">
-                ›
-              </button>
+
+              <div className="step-image">
+                <img src={activeImage.url} alt={makeTitle(activeImage.filename)} />
+              </div>
+
+              <div className="step-footer">
+                <div className="step-description">
+                  <p>{getDescription(activeGroup.section, makeTitle(activeImage.filename))}</p>
+                </div>
+                <div className="step-counter">
+                  {activeIndex + 1} / {activeGroup.images.length}
+                </div>
+              </div>
             </div>
-            <div className="carousel-view">
-              <img src={activeImage.url} alt={makeTitle(activeImage.filename)} />
-            </div>
-            <div className="carousel-details">
-              <p>{getDescription(activeGroup.section, makeTitle(activeImage.filename))}</p>
-              <span className="carousel-counter">
-                {activeIndex + 1} / {activeGroup.images.length}
-              </span>
-            </div>
-          </section>
-        ) : (
-          <p className="empty-state">Selecciona una sección para comenzar.</p>
-        )}
+          ) : (
+            <p className="empty-state">Selecciona una sección para comenzar.</p>
+          )}
+        </div>
       </main>
     </div>
   )
