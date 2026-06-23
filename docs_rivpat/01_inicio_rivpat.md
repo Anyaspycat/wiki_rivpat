@@ -3,9 +3,13 @@
 ## Evaluación Sumativa N°2
 
 **Asignatura:** TI3V35 — Sistemas Operativos
+
 **Unidad:** 2 — Sistema operativo de red: Windows Server
+
 **Estudiante:** Patricia Riveros Estay
+
 **Proyecto:** `wiki_rivpat`
+
 **Carpeta de documentación:** `docs_rivpat`
 
 ---
