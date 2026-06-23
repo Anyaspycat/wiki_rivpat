@@ -187,11 +187,29 @@
 .app-layout {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'sidebar main';
   min-height: 100vh;
-  width: 100%;
+  width: min(100%, 1180px);
+  max-width: 1180px;
+  margin: 0 auto;
   padding: 16px 36px 24px;
   gap: 18px;
   box-sizing: border-box;
+}
+
+.wiki-header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main-content {
+  grid-area: main;
 }
 
 .sidebar {
@@ -318,6 +336,19 @@
 .carousel-arrow:focus-visible {
   background: var(--accent);
   color: white;
+}
+
+.section-label {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.section-label span {
+  display: inline-block;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
 }
 
 .step-title {

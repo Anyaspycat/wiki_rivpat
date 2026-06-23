@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { descripcionesPasos } from './data/descripcionesPasos'
+import { titulosPaso } from './data/titulosPaso'
+import { titulosSecciones } from './data/titulosSecciones'
 import './App.css'
 
 function makeTitle(filename) {
@@ -35,6 +37,16 @@ function getDescription(section, title) {
   const sectionDescriptions = descripcionesPasos[section]
   if (!sectionDescriptions) return 'Descripción no definida. Edita src/data/descripcionesPasos.js para personalizar esta entrada.'
   return sectionDescriptions[title] || 'Descripción no definida. Edita src/data/descripcionesPasos.js para personalizar esta entrada.'
+}
+
+function getCustomTitle(section, title) {
+  const sectionTitles = titulosPaso[section]
+  if (!sectionTitles) return title
+  return sectionTitles[title] || title
+}
+
+function getSectionTitle(section) {
+  return titulosSecciones[section] || section
 }
 
 function App() {
@@ -118,6 +130,14 @@ function App() {
 
   return (
     <div className="app-layout">
+      <header className="wiki-header">
+        <div className="header-inner">
+          <h1 className="wiki-title">
+            <span>Wiki - Instalación y Configuración</span>
+            <span>Windows Server 2025</span>
+          </h1>
+        </div>
+      </header>
       <aside className="sidebar">
         <h2>Secciones</h2>
         <ul>
@@ -128,22 +148,13 @@ function App() {
                 onClick={() => setActiveSection(group.section)}
                 type="button"
               >
-                {group.section}
+                {getSectionTitle(group.section)}
               </button>
             </li>
           ))}
         </ul>
       </aside>
       <main className="main-content">
-        <header className="wiki-header">
-          <div className="header-inner">
-            <h1 className="wiki-title">
-              <span>Wiki - Instalación y Configuración</span>
-              <span>Windows Server 2025</span>
-            </h1>
-          </div>
-        </header>
-
         <div className="carousel-container">
           {activeGroup && activeImage ? (
             <div className="carousel-inner" id={activeGroup.section}>
@@ -156,8 +167,12 @@ function App() {
                 </button>
               </div>
 
+              <div className="section-label">
+                <span>{getSectionTitle(activeGroup.section)}</span>
+              </div>
+
               <div className="step-title">
-                <h2>{makeTitle(activeImage.filename)}</h2>
+                <h2>{getCustomTitle(activeGroup.section, makeTitle(activeImage.filename))}</h2>
               </div>
 
               <div className="step-image">
