@@ -54,7 +54,19 @@ Se creó una máquina virtual en VirtualBox para instalar el sistema operativo W
 
 La máquina virtual fue configurada con los recursos necesarios para ejecutar el servidor dentro del laboratorio, incluyendo memoria RAM, almacenamiento dinámico y una tarjeta de red conectada a una red interna.
 
-WIP - Imagenes Paso a Paso
+Paso a Paso:
+
+1) Asignamos la maquina de nombre `SRV-DC01` y seleccionamos la unidad ISO de Windows Server 2025
+![A_Paso_1](img_rivpat/02_Instalacion_Configuracion/A_Paso_1.png)
+
+2) Indicamos la memoria RAM (4GB) y los núcleos de la CPU (2)
+![A_Paso_2](img_rivpat/02_Instalacion_Configuracion/A_Paso_2.png)
+
+3) Indicamos la memoria de disco duro (50 GB)
+![A_Paso_3](img_rivpat/02_Instalacion_Configuracion/A_Paso_3.png)
+
+4) Configuramos la red interna de nombre `redlab`
+![A_Paso_4](img_rivpat/02_Instalacion_Configuracion/A_Paso_4.png)
 
 ---
 

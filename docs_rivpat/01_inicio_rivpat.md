@@ -74,11 +74,7 @@ En el laboratorio se documentan las siguientes configuraciones:
 
 Cada sección de esta wiki contiene una explicación breve de lo realizado, su propósito dentro del laboratorio y una captura asociada como evidencia.
 
-Las capturas se almacenan en la carpeta:
-
-```text
-img_rivpat/
-```
+Las capturas se almacenan en la carpeta `img_rivpat/`.
 
 ---
 
