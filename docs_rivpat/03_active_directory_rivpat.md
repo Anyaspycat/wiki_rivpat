@@ -96,7 +96,16 @@ Dentro del dominio `inacap.local`, se creó una unidad organizativa llamada `Ven
 
 La unidad organizativa permite ordenar los objetos del dominio y facilita la administración de usuarios, grupos y políticas de grupo.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Desde el **Administrador del servidor**, se ingresa a **Herramientas** y luego se selecciona **Usuarios y equipos de Active Directory**.
+![C_Paso_1](img_rivpat/04_ObjetosDominio/C_Paso_1.png)
+
+2. Dentro del dominio `inacap.local`, se hace clic derecho y se selecciona la opción para crear una nueva **Unidad organizativa**.
+![C_Paso_2](img_rivpat/04_ObjetosDominio/C_Paso_2.png)
+
+3. Se crea una nueva unidad organizativa con el nombre `Ventas`.
+![C_Paso_3](img_rivpat/04_ObjetosDominio/C_Paso_3.png)
 
 ---
 
@@ -110,7 +119,16 @@ Durante la creación del usuario se configuró una contraseña inicial y, para f
 
 Esto permite que el usuario pueda iniciar sesión directamente en el equipo cliente cuando este sea incorporado al dominio.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Se selecciona la unidad organizativa `Ventas`, se hace clic derecho y se crea un nuevo usuario.
+![C_Paso_4](img_rivpat/04_ObjetosDominio/C_Paso_4.png)
+
+2. Se ingresan los datos del usuario que iniciará sesión desde el equipo cliente del laboratorio.
+![C_Paso_5](img_rivpat/04_ObjetosDominio/C_Paso_5.png)
+
+3. Posteriormente, se configura la contraseña inicial del usuario.
+![C_Paso_6](img_rivpat/04_ObjetosDominio/C_Paso_6.png)
 
 ---
 
@@ -122,7 +140,25 @@ Posteriormente, se agregaron los usuarios correspondientes como miembros del gru
 
 El grupo permite administrar permisos y políticas de forma más ordenada, aplicando configuraciones a varios usuarios en lugar de hacerlo individualmente.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Se selecciona la unidad organizativa `Ventas`, se hace clic derecho y se crea un nuevo grupo.
+![C_Paso_7](img_rivpat/04_ObjetosDominio/C_Paso_7.png)
+
+2. Se define un nuevo grupo con el nombre `G-Ventas`.
+![C_Paso_8](img_rivpat/04_ObjetosDominio/C_Paso_8.png)
+
+3. Una vez creado el grupo, se selecciona el usuario creado anteriormente y se ingresa a sus **Propiedades**.
+![C_Paso_9](img_rivpat/04_ObjetosDominio/C_Paso_9.png)
+
+4. Dentro de las propiedades del usuario, se accede a la pestaña **Miembro de** y se selecciona la opción para agregar un nuevo grupo.
+![C_Paso_10](img_rivpat/04_ObjetosDominio/C_Paso_10.png)
+
+5. Se agrega el grupo `G-Ventas` creado anteriormente y se confirma la selección mediante la opción **Aceptar**.
+![C_Paso_11](img_rivpat/04_ObjetosDominio/C_Paso_11.png)
+
+6. Finalmente, se valida que el grupo haya sido asignado correctamente al usuario.
+![C_Paso_12](img_rivpat/04_ObjetosDominio/C_Paso_12.png)
 
 ---
 
