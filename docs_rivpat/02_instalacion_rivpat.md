@@ -56,16 +56,16 @@ La máquina virtual fue configurada con los recursos necesarios para ejecutar el
 
 Paso a Paso:
 
-1) Asignamos la maquina de nombre `SRV-DC01` y seleccionamos la unidad ISO de Windows Server 2025
+1. Se asigna el nombre `SRV-DC01` a la máquina virtual y se selecciona la imagen ISO de Windows Server 2025.
 ![A_Paso_1](img_rivpat/02_Instalacion_Configuracion/A_Paso_1.png)
 
-2) Indicamos la memoria RAM (4GB) y los núcleos de la CPU (2)
+2. Se configura la memoria RAM con 4 GB y se asignan 2 núcleos de CPU.
 ![A_Paso_2](img_rivpat/02_Instalacion_Configuracion/A_Paso_2.png)
 
-3) Indicamos la memoria de disco duro (50 GB)
+3. Se define un disco duro virtual de 50 GB para la instalación del sistema operativo.
 ![A_Paso_3](img_rivpat/02_Instalacion_Configuracion/A_Paso_3.png)
 
-4) Configuramos la red interna de nombre `redlab`
+4. Se configura el adaptador de red en modo red interna, utilizando el nombre `redlab`.
 ![A_Paso_4](img_rivpat/02_Instalacion_Configuracion/A_Paso_4.png)
 
 ---
@@ -78,7 +78,25 @@ Durante la instalación se seleccionó la edición con experiencia de escritorio
 
 Al finalizar la instalación, se configuró la contraseña del usuario administrador local.
 
-WIP - Imagenes Paso a Paso
+Paso a Paso:
+
+1. Se inicia la máquina virtual y se configura el idioma, formato de hora y distribución del teclado.
+![A_Paso_5](img_rivpat/02_Instalacion_Configuracion/A_Paso_5.png)
+
+2. Se selecciona la instalación de Windows Server 2025, autorizando la eliminación de archivos existentes en el disco virtual.
+![A_Paso_6](img_rivpat/02_Instalacion_Configuracion/A_Paso_6.png)
+
+3. Se selecciona la edición `Standard Evaluation (experiencia de escritorio)`, la cual incluye una interfaz gráfica para la administración del servidor.
+![A_Paso_7](img_rivpat/02_Instalacion_Configuracion/A_Paso_7.png)
+
+4. Se selecciona el espacio disponible del disco virtual para instalar el sistema operativo.
+![A_Paso_8](img_rivpat/02_Instalacion_Configuracion/A_Paso_8.png)
+
+5. Se configura la contraseña del usuario local `Administrador`.
+![A_Paso_9](img_rivpat/02_Instalacion_Configuracion/A_Paso_9.png)
+
+6. Finalmente, se visualiza la ventana del Administrador del servidor, evidenciando que la instalación se completó correctamente.
+![A_Paso_10](img_rivpat/02_Instalacion_Configuracion/A_Paso_10.png)
 
 ---
 
@@ -90,7 +108,13 @@ Este nombre permite identificar claramente al servidor principal del laboratorio
 
 Después de aplicar el cambio de nombre, se reinició el sistema para que la configuración quedara activa.
 
-WIP - Imagenes Paso a Paso
+Paso a Paso:
+
+1. Desde el Administrador del servidor, se ingresa a la opción **Servidor local** y se selecciona el nombre actual del equipo.
+![A_Paso_11](img_rivpat/02_Instalacion_Configuracion/A_Paso_11.png)
+
+2. Se selecciona la opción para cambiar el nombre del equipo y se establece el nombre `SRV-DC01`.
+![A_Paso_12](img_rivpat/02_Instalacion_Configuracion/A_Paso_12.png)
 
 ---
 
@@ -111,7 +135,22 @@ La dirección IP fija es importante porque el servidor entregará servicios de r
 
 El DNS preferido se configuró como `127.0.0.1`, ya que el servidor se utilizará posteriormente como servidor DNS del dominio.
 
-WIP - Imagenes Paso a Paso
+Paso a Paso:
+
+1. Desde **Servidor local**, se selecciona la opción correspondiente al adaptador de red Ethernet.
+![A_Paso_13](img_rivpat/02_Instalacion_Configuracion/A_Paso_13.png)
+
+2. Se hace clic derecho sobre el adaptador Ethernet y se selecciona la opción **Propiedades**.
+![A_Paso_14](img_rivpat/02_Instalacion_Configuracion/A_Paso_14.png)
+
+3. Se selecciona la opción `Protocolo de Internet versión 4 (TCP/IPv4)` y luego se ingresa a **Propiedades**.
+![A_Paso_15](img_rivpat/02_Instalacion_Configuracion/A_Paso_15.png)
+
+4. Se configuran los parámetros de red de acuerdo con la dirección IP, máscara de subred y DNS definidos para el servidor.
+![A_Paso_16](img_rivpat/02_Instalacion_Configuracion/A_Paso_16.png)
+
+5. Se vuelve a la ventana de **Servidor local** y se verifica que la dirección IP haya sido modificada correctamente.
+![A_Paso_17](img_rivpat/02_Instalacion_Configuracion/A_Paso_17.png)
 
 ---
 
@@ -121,7 +160,13 @@ Se verificó que el firewall de Windows se encontrara activado.
 
 El firewall se mantiene habilitado para conservar la seguridad del servidor. Posteriormente, los roles instalados en Windows Server abrirán los puertos necesarios según los servicios configurados.
 
-WIP - Imagenes Paso a Paso
+Paso a Paso:
+
+1. Desde el buscador de Windows, se escribe `Firewall` y se selecciona la opción **Firewall de Windows Defender**.
+![A_Paso_18](img_rivpat/02_Instalacion_Configuracion/A_Paso_18.png)
+
+2. Se verifica que el Firewall de Windows se encuentre activo, permitiendo que posteriormente cada rol habilite los puertos correspondientes según los servicios configurados.
+![A_Paso_19](img_rivpat/02_Instalacion_Configuracion/A_Paso_19.png)
 
 ---
 
