@@ -34,7 +34,19 @@ En el asistente de instalación se seleccionó el rol **Servicios de dominio de 
 
 Al finalizar la instalación del rol, el dominio aún no queda creado, ya que primero es necesario promover el servidor como controlador de dominio.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Desde el **Administrador del servidor**, se ingresa a la opción **Administrar** y luego se selecciona **Agregar roles y características**.
+![B_Paso_1](img_rivpat/03_ActiveDirectory_DNS/B_Paso_1.png)
+
+2. En la sección **Roles del servidor**, se selecciona la opción **Servicios de dominio de Active Directory**.
+![B_Paso_2](img_rivpat/03_ActiveDirectory_DNS/B_Paso_2.png)
+
+3. Se validan las características adicionales que serán incorporadas y se selecciona la opción **Agregar características**.
+![B_Paso_3](img_rivpat/03_ActiveDirectory_DNS/B_Paso_3.png)
+
+4. Se selecciona la opción **Instalar** para iniciar el proceso de instalación del rol **AD DS**.
+![B_Paso_4](img_rivpat/03_ActiveDirectory_DNS/B_Paso_4.png)
 
 ---
 
@@ -48,7 +60,16 @@ Durante este proceso, Windows Server instaló y configuró automáticamente el s
 
 Después de completar la configuración, el servidor se reinició y quedó habilitado como controlador de dominio.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Una vez finalizada la instalación del rol **AD DS**, se selecciona la notificación del **Administrador del servidor** y luego la opción **Promover este servidor a controlador de dominio**.
+![B_Paso_5](img_rivpat/03_ActiveDirectory_DNS/B_Paso_5.png)
+
+2. Se selecciona la opción **Agregar un nuevo bosque** y se define el dominio raíz con el nombre `inacap.local`.
+![B_Paso_6](img_rivpat/03_ActiveDirectory_DNS/B_Paso_6.png)
+
+3. Se ingresa la contraseña para el modo de restauración de servicios de directorio y se continúa con el asistente hasta completar correctamente la configuración.
+![B_Paso_7](img_rivpat/03_ActiveDirectory_DNS/B_Paso_7.png)
 
 ---
 
@@ -60,7 +81,10 @@ Esto permitió validar que el servidor ya formaba parte del dominio `inacap.loca
 
 Desde este punto, el servidor quedó preparado para administrar usuarios, grupos, equipos y unidades organizativas dentro del dominio.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Para validar que el dominio fue configurado correctamente, se inicia sesión nuevamente en el servidor y se verifica que el dominio **INACAP** aparezca disponible en la pantalla de inicio de sesión.
+![B_Paso_8](img_rivpat/03_ActiveDirectory_DNS/B_Paso_8.png)
 
 ---
 
