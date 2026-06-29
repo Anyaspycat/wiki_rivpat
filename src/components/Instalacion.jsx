@@ -8,21 +8,21 @@ const Instalacion = () => {
       nombre: 'VirtualBox',
       descripcion: 'Aplicación de virtualización para emular el servidor y cliente',
       enlace: 'https://www.virtualbox.org/wiki/Downloads',
-      imagen: 'img_rivpat/01_Requisitos/VirtualBox_Download.png',
+      imagen: 'docs_rivpat/img_rivpat/01_Requisitos/VirtualBox_Download.png',
     },
     {
       id: 2,
       nombre: 'Windows Server 2025',
       descripcion: 'Sistema operativo para el servidor principal del laboratorio',
       enlace: 'https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025',
-      imagen: 'img_rivpat/01_Requisitos/WindowsServer_Download.png',
+      imagen: 'docs_rivpat/img_rivpat/01_Requisitos/WindowsServer_Download.png',
     },
     {
       id: 3,
       nombre: 'Windows 10 Pro',
       descripcion: 'Sistema operativo para la máquina cliente (usando MediaCreationTool_22H2.exe)',
       enlace: 'https://www.microsoft.com/es-es/software-download/windows10',
-      imagen: 'img_rivpat/01_Requisitos/Windows10Pro_Download.png',
+      imagen: 'docs_rivpat/img_rivpat/01_Requisitos/Windows10Pro_Download.png',
     },
   ];
 
