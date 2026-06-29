@@ -1,4 +1,3 @@
-````md
 # Wiki Laboratorio Windows Server 2025
 
 ## Evaluación Sumativa N°2
@@ -74,7 +73,7 @@ Implementar y documentar una infraestructura básica de red con Windows Server, 
 |                                                      |
 |              Dominio: inacap.local                   |
 +------------------------------------------------------+
-````
+```
 
 ---
 
