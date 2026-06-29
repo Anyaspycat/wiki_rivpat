@@ -25,16 +25,6 @@ La política configurada permite restringir el acceso al **Panel de control** y 
 
 ---
 
-## Paso a Paso Acceso a Administración de directivas de grupo
-
-Desde el servidor `SRV-DC01`, se ingresó al **Administrador del servidor** y luego a la opción `Herramientas → Administración de directivas de grupo`:
-
-Esta herramienta permite crear, editar y vincular políticas de grupo dentro del dominio.
-
-WIP - Imágenes Paso a Paso
-
----
-
 ## Paso a Paso Creación de la GPO
 
 Dentro de la consola de Administración de directivas de grupo, se ubicó la unidad organizativa `Ventas`.
@@ -43,7 +33,16 @@ Luego se seleccionó la opción para crear una nueva GPO `GPO-Ventas` en este do
 
 Vincular la GPO a la OU permite que la configuración se aplique a los usuarios o equipos contenidos dentro de dicha unidad organizativa.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Desde el menú **Herramientas**, se selecciona la opción **Administración de directivas de grupo**.
+![F\_Paso\_1](img_rivpat/07_PoliticasGrupo/F_Paso_1.png)
+
+2. Dentro del administrador, se selecciona la unidad organizativa `Ventas` y se crea una nueva GPO en este dominio, vinculándola directamente a dicha unidad organizativa.
+![F\_Paso\_2](img_rivpat/07_PoliticasGrupo/F_Paso_2.png)
+
+3. Se define el nombre de la nueva GPO como `GPO-Ventas`.
+![F\_Paso\_3](img_rivpat/07_PoliticasGrupo/F_Paso_3.png)
 
 ---
 
@@ -64,7 +63,16 @@ En esta sección se habilitó la política `Prohibir el acceso al Panel de contr
 
 Esta configuración impide que el usuario pueda abrir el Panel de control o acceder a la configuración del sistema desde el cliente.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Una vez creada la GPO, se hace clic derecho sobre `GPO-Ventas` y se selecciona la opción **Editar**.
+![F\_Paso\_4](img_rivpat/07_PoliticasGrupo/F_Paso_4.png)
+
+2. Dentro del editor de directivas, se accede a la configuración correspondiente para definir restricciones de usuario. En este caso, se configurará la restricción de acceso al **Panel de control** y a la **Configuración de PC**.
+![F\_Paso\_5](img_rivpat/07_PoliticasGrupo/F_Paso_5.png)
+
+3. Se habilita la directiva **Prohibir el acceso al Panel de control y a la configuración de PC**.
+![F\_Paso\_6](img_rivpat/07_PoliticasGrupo/F_Paso_6.png)
 
 ---
 
@@ -76,19 +84,19 @@ Para forzar la actualización de las políticas de grupo, se abrió una ventana 
 
 Luego se cerró la sesión y se volvió a iniciar sesión con el mismo usuario del dominio para asegurar que la política quedara aplicada correctamente.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
 
----
+1. Para validar el funcionamiento de la GPO, se inicia sesión en el equipo cliente `PC01` con el usuario de dominio y se intenta acceder al **Panel de control**.
+![F\_Paso\_7](img_rivpat/07_PoliticasGrupo/F_Paso_7.png)
 
-## Paso a Paso Validación de la GPO
+2. Se ejecuta el comando `gpupdate /force` para forzar la actualización de las directivas de grupo en el equipo cliente.
+![F\_Paso\_8](img_rivpat/07_PoliticasGrupo/F_Paso_8.png)
 
-Después de aplicar la política, se intentó acceder al Panel de control desde el cliente `PC01`.
+3. Se reinicia el equipo cliente y se intenta abrir nuevamente el **Panel de control** para validar que la restricción se encuentre aplicada.
+![F\_Paso\_9](img_rivpat/07_PoliticasGrupo/F_Paso_9.png)
 
-El sistema bloqueó el acceso, validando que la GPO `GPO-Ventas` fue aplicada correctamente sobre el usuario del dominio.
-
-Esta comprobación permite confirmar que la administración centralizada mediante políticas de grupo está funcionando dentro del dominio `inacap.local`.
-
-WIP - Imágenes Paso a Paso
+4. Se visualiza el mensaje de restricción, lo que confirma que la GPO fue aplicada correctamente sobre el usuario del dominio.
+![F\_Paso\_10](img_rivpat/07_PoliticasGrupo/F_Paso_10.png)
 
 ---
 
