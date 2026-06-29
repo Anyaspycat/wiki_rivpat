@@ -176,8 +176,8 @@ const ActiveDirectory = () => {
       </header>
 
       {/* Objetivo de la sección */}
-      <section className="seccion-objetivo">
-        <h2 className="seccion-titulo">Objetivo de la Sección</h2>
+      <section className="ad-seccion-objetivo">
+        <h2 className="ad-seccion-titulo">Objetivo de la Sección</h2>
         <p>
           En esta sección se documenta la instalación y configuración inicial de <strong>Active Directory Domain Services (AD DS)</strong> en el servidor <code>SRV-DC01</code>.
         </p>
@@ -190,8 +190,8 @@ const ActiveDirectory = () => {
       </section>
 
       {/* Datos generales de Active Directory */}
-      <section className="seccion-datos">
-        <h2 className="seccion-titulo">Datos Generales de Active Directory</h2>
+      <section className="ad-seccion-datos">
+        <h2 className="ad-seccion-titulo">Datos Generales de Active Directory</h2>
         <table className="tabla-datos-ad">
           <tbody>
             <tr>
@@ -236,8 +236,8 @@ const ActiveDirectory = () => {
 
       {/* Secciones de pasos */}
       {secciones.map((seccionPasos, idx) => (
-        <section key={idx} className="seccion-pasos">
-          <h2 className="seccion-titulo">{seccionPasos.seccion}</h2>
+        <section key={idx} className="ad-seccion-pasos">
+          <h2 className="ad-seccion-titulo">{seccionPasos.seccion}</h2>
           <p className="desc-seccion">{seccionPasos.descripcionSeccion}</p>
 
           <div className="pasos-lista">
@@ -257,8 +257,8 @@ const ActiveDirectory = () => {
       ))}
 
       {/* Resultado de la configuración */}
-      <section className="seccion-resultado">
-        <h2 className="seccion-titulo">Resultado de la Configuración</h2>
+      <section className="ad-seccion-resultado">
+        <h2 className="ad-seccion-titulo">Resultado de la Configuración</h2>
         <div className="contenido-resultado">
           <p>
             Al finalizar esta etapa, el servidor <code>SRV-DC01</code> quedó configurado como controlador de dominio del laboratorio.

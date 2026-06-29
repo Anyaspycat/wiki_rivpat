@@ -28,7 +28,7 @@
 
 /* ===== Secciones generales ===== */
 
-.seccion-titulo {
+.ad-seccion-titulo {
   font-size: 1.5rem;
   color: #1a3a52;
   border-left: 4px solid #27496d;
@@ -37,7 +37,7 @@
   font-weight: 600;
 }
 
-section {
+.ad-container section {
   margin-bottom: 2.5rem;
   background: white;
   padding: 2rem;
@@ -45,12 +45,12 @@ section {
   border: 1px solid #e0e0e0;
 }
 
-section p {
+.ad-container section p {
   margin: 0.8rem 0;
   text-align: justify;
 }
 
-section code {
+.ad-container section code {
   background: #f0f0f0;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
@@ -65,19 +65,19 @@ section strong {
 
 /* ===== Sección Objetivo ===== */
 
-.seccion-objetivo {
+.ad-seccion-objetivo {
   background: #f0f4f8;
   border-left: 4px solid #27496d;
 }
 
-.seccion-objetivo p {
+.ad-seccion-objetivo p {
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
 /* ===== Sección Datos ===== */
 
-.seccion-datos {
+.ad-seccion-datos {
   background: white;
 }
 
@@ -113,7 +113,7 @@ section strong {
 
 /* ===== Sección Pasos ===== */
 
-.seccion-pasos {
+.ad-seccion-pasos {
   background: white;
 }
 
@@ -186,8 +186,8 @@ section strong {
 
 /* ===== Sección Resultado ===== */
 
-.seccion-resultado {
-  background: linear-gradient(135deg, #e8f4f8 0%, #f0f4f8 100%);
+.ad-seccion-resultado {
+  background: #f0f4f8;
   border-left: 4px solid #27496d;
 }
 
