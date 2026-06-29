@@ -1,0 +1,279 @@
+/* ===== Estilos generales del componente Cliente ===== */
+
+.cliente-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Encabezado ===== */
+
+.cliente-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #2d7a3e 0%, #1a4d28 100%);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.cliente-titulo {
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+
+/* ===== Secciones generales ===== */
+
+.seccion-titulo {
+  font-size: 1.5rem;
+  color: #1a3a52;
+  border-left: 4px solid #2d7a3e;
+  padding-left: 1rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+section p {
+  margin: 0.8rem 0;
+  text-align: justify;
+}
+
+section code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+section strong {
+  color: #1a3a52;
+  font-weight: 600;
+}
+
+/* ===== Sección Objetivo ===== */
+
+.seccion-objetivo {
+  background: #f0f8f3;
+  border-left: 4px solid #2d7a3e;
+}
+
+.seccion-objetivo p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===== Sección Datos ===== */
+
+.seccion-datos {
+  background: white;
+}
+
+.tabla-datos-cliente {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabla-datos-cliente td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-datos-cliente tr:hover {
+  background: #f9f9f9;
+}
+
+.tabla-datos-cliente .etiqueta {
+  font-weight: 600;
+  color: #2d7a3e;
+  width: 25%;
+  vertical-align: top;
+}
+
+.tabla-datos-cliente code {
+  background: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+/* ===== Sección Pasos ===== */
+
+.seccion-pasos {
+  background: white;
+}
+
+.desc-seccion {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.5rem 0 1.5rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 3px solid #2d7a3e;
+  border-radius: 4px;
+}
+
+.pasos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.paso-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.paso-header {
+  padding: 1.2rem;
+  background: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.paso-numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #2d7a3e;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.paso-descripcion {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.paso-imagen-container {
+  padding: 1rem;
+  background: white;
+  text-align: center;
+}
+
+.paso-imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+}
+
+/* ===== Sección Resultado ===== */
+
+.seccion-resultado {
+  background: linear-gradient(135deg, #f0f8f3 0%, #e8f5f1 100%);
+  border-left: 4px solid #2d7a3e;
+}
+
+.contenido-resultado {
+  margin-top: 1rem;
+}
+
+.contenido-resultado p {
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+}
+
+.contenido-resultado code {
+  background: #d4f0e0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #1a4d28;
+}
+
+.contenido-resultado strong {
+  color: #1a3a52;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .cliente-container {
+    padding: 1rem;
+  }
+
+  .cliente-titulo {
+    font-size: 1.6rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .paso-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .paso-descripcion {
+    text-align: center;
+  }
+
+  .paso-imagen {
+    max-height: 300px;
+  }
+
+  .tabla-datos-cliente .etiqueta {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .tabla-datos-cliente td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cliente-container {
+    padding: 0.5rem;
+  }
+
+  .cliente-titulo {
+    font-size: 1.3rem;
+  }
+
+  .paso-numero {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .paso-descripcion {
+    font-size: 0.85rem;
+  }
+}
