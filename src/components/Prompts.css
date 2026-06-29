@@ -1,0 +1,387 @@
+/* ===== Estilos generales del componente Prompts ===== */
+
+.prompts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Encabezado ===== */
+
+.prompts-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.prompts-titulo {
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+}
+
+/* ===== Secciones generales ===== */
+
+.seccion-titulo {
+  font-size: 1.5rem;
+  color: #1a3a52;
+  border-left: 4px solid #ec4899;
+  padding-left: 1rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+section p {
+  margin: 0.8rem 0;
+  text-align: justify;
+}
+
+section code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+section strong {
+  color: #1a3a52;
+  font-weight: 600;
+}
+
+/* ===== Sección Datos Generales ===== */
+
+.seccion-datos-generales {
+  background: #fef2f8;
+  border-left: 4px solid #ec4899;
+}
+
+.tabla-datos-generales {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabla-datos-generales td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-datos-generales tr:hover {
+  background: #fff5fa;
+}
+
+.tabla-datos-generales .etiqueta {
+  font-weight: 600;
+  color: #ec4899;
+  width: 25%;
+  vertical-align: top;
+}
+
+.tabla-datos-generales code {
+  background: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+/* ===== Sección Registro de Prompts ===== */
+
+.seccion-registro {
+  background: white;
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seccion-registro > h2 {
+  padding: 2rem 2rem 1rem 2rem;
+  margin: 0;
+}
+
+.tabla-responsive {
+  overflow-x: auto;
+  padding: 2rem;
+}
+
+.tabla-prompts {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-prompts thead {
+  background: #ec4899;
+  color: white;
+}
+
+.tabla-prompts th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #be185d;
+}
+
+.tabla-prompts td {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+.tabla-prompts tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.tabla-prompts tbody tr:nth-child(odd) {
+  background: #fef9fb;
+}
+
+/* Columnas específicas */
+
+.col-numero {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.col-herramienta {
+  width: 140px;
+  text-align: center;
+}
+
+.col-seccion {
+  width: 150px;
+}
+
+.col-prompt {
+  min-width: 300px;
+}
+
+.col-resultado {
+  min-width: 300px;
+}
+
+.tabla-prompts .col-seccion code {
+  background: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #be185d;
+}
+
+/* Badge para herramientas */
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge-chatgpt {
+  background: #fbbf24;
+  color: #78350f;
+}
+
+.badge-github-copilot {
+  background: #60a5fa;
+  color: white;
+}
+
+/* Textos en tabla */
+
+.texto-prompt,
+.texto-resultado {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.texto-prompt {
+  color: #555;
+  font-style: italic;
+}
+
+.texto-resultado {
+  color: #333;
+}
+
+/* ===== Sección Resumen ===== */
+
+.seccion-resumen {
+  background: linear-gradient(135deg, #fef2f8 0%, #fff5fa 100%);
+  border-left: 4px solid #ec4899;
+}
+
+.contenido-resumen {
+  margin-top: 1rem;
+}
+
+.contenido-resumen p {
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+}
+
+.contenido-resumen code {
+  background: #f0e6ea;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #be185d;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 1024px) {
+  .col-numero {
+    width: 50px;
+  }
+
+  .col-herramienta {
+    width: 120px;
+  }
+
+  .col-seccion {
+    width: 130px;
+  }
+
+  .col-prompt {
+    min-width: 250px;
+  }
+
+  .col-resultado {
+    min-width: 250px;
+  }
+
+  .tabla-prompts th,
+  .tabla-prompts td {
+    padding: 0.8rem;
+  }
+
+  .tabla-prompts {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prompts-container {
+    padding: 1rem;
+  }
+
+  .prompts-titulo {
+    font-size: 1.6rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .tabla-responsive {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .tabla-prompts {
+    font-size: 0.8rem;
+    min-width: 800px;
+  }
+
+  .tabla-prompts th,
+  .tabla-prompts td {
+    padding: 0.6rem;
+  }
+
+  .col-numero {
+    width: 45px;
+  }
+
+  .col-herramienta {
+    width: 100px;
+  }
+
+  .col-seccion {
+    width: 100px;
+  }
+
+  .col-prompt {
+    min-width: 200px;
+  }
+
+  .col-resultado {
+    min-width: 200px;
+  }
+
+  .texto-prompt,
+  .texto-resultado {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prompts-container {
+    padding: 0.5rem;
+  }
+
+  .prompts-titulo {
+    font-size: 1.3rem;
+  }
+
+  .tabla-responsive {
+    overflow-x: auto;
+  }
+
+  .tabla-prompts {
+    font-size: 0.75rem;
+    min-width: 700px;
+  }
+
+  .tabla-prompts th,
+  .tabla-prompts td {
+    padding: 0.4rem;
+  }
+
+  .col-numero {
+    width: 40px;
+  }
+
+  .col-herramienta {
+    width: 80px;
+  }
+
+  .col-seccion {
+    width: 80px;
+  }
+
+  .badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .texto-prompt,
+  .texto-resultado {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
