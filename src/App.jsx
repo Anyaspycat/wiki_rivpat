@@ -12,16 +12,17 @@ function App() {
   const [seccionActiva, setSeccionActiva] = useState('inicio');
 
   const secciones = [
-    { id: 'inicio', titulo: 'Inicio', componente: <Inicio /> },
-    { id: 'instalacion', titulo: 'Instalación', componente: <Instalacion /> },
-    { id: 'active-directory', titulo: 'Active Directory', componente: <ActiveDirectory /> },
-    { id: 'cliente', titulo: 'Cliente al Dominio', componente: <Cliente /> },
-    { id: 'servicios-red', titulo: 'DNS y DHCP', componente: <ServiciosRed /> },
-    { id: 'gpo', titulo: 'GPO', componente: <Gpo /> },
-    { id: 'prompts', titulo: 'Bitácora IA', componente: <Prompts /> },
+    { id: 'inicio', titulo: 'Inicio', componente: Inicio },
+    { id: 'instalacion', titulo: 'Instalación', componente: Instalacion },
+    { id: 'active-directory', titulo: 'Active Directory', componente: ActiveDirectory },
+    { id: 'cliente', titulo: 'Cliente al Dominio', componente: Cliente },
+    { id: 'servicios-red', titulo: 'DNS y DHCP', componente: ServiciosRed },
+    { id: 'gpo', titulo: 'GPO', componente: Gpo },
+    { id: 'prompts', titulo: 'Bitácora IA', componente: Prompts },
   ];
 
   const seccionSeleccionada = secciones.find((s) => s.id === seccionActiva);
+  const ComponenteActivo = seccionSeleccionada?.componente;
 
   return (
     <div className="app">
@@ -45,7 +46,7 @@ function App() {
       </aside>
 
       {/* Contenido Principal */}
-      <main className="content">
+      <main className="content" key={seccionActiva}>
         {seccionSeleccionada && seccionSeleccionada.componente}
       </main>
     </div>
