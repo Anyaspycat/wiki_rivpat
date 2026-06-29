@@ -127,6 +127,24 @@ const Prompts = () => {
       resultado:
         'Se generó el componente de bitácora de inteligencia artificial, permitiendo visualizar los prompts utilizados durante el desarrollo de la documentación y la wiki.',
     },
+    {
+      numero: 14,
+      herramienta: 'GitHub Copilot',
+      seccion: 'App.jsx',
+      prompt:
+        'Reemplaza el contenido actual de App.jsx por una estructura de wiki básica en React. Importa los componentes Inicio, Instalacion, ActiveDirectory, Cliente, ServiciosRed, Gpo y Prompts. Elimina la plantilla inicial de Vite, usa useState para controlar la sección activa y crea una navegación con botones.',
+      resultado:
+        'Se reemplazó la plantilla inicial de Vite por una aplicación tipo wiki, agregando navegación entre secciones y visualización dinámica del componente seleccionado.',
+    },
+    {
+      numero: 15,
+      herramienta: 'GitHub Copilot',
+      seccion: 'App.css',
+      prompt:
+        'Reemplaza el CSS actual por estilos para una wiki básica en React. Crea estilos para layout general, barra lateral, botones de navegación, botón activo, contenido principal, tablas, tarjetas de pasos, imágenes responsivas y bloques de código.',
+      resultado:
+        'Se generaron estilos visuales para la wiki, mejorando la distribución, lectura del contenido, presentación de tablas, evidencias e interacción con el menú de navegación.',
+    },
   ];
 
   return (
