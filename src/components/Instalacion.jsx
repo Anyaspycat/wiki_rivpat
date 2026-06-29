@@ -322,3 +322,5 @@ const Instalacion = () => {
 };
 
 export default Instalacion;
+
+
