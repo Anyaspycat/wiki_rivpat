@@ -27,18 +27,6 @@ Esta configuración es necesaria para que el cliente `PC01` pueda comunicarse co
 
 ---
 
-## Paso a Paso Revisión del servicio DNS
-
-El servicio DNS fue instalado junto con Active Directory, ya que es necesario para el funcionamiento del dominio `inacap.local`.
-
-Este servicio permite que los equipos de la red puedan resolver nombres del dominio y localizar el controlador de dominio `SRV-DC01`.
-
-La configuración DNS es importante porque, sin ella, el cliente podría recibir una IP válida, pero no podría encontrar correctamente el dominio para unirse a `inacap.local`.
-
-WIP - Imágenes Paso a Paso
-
----
-
 ## Paso a Paso Instalación del rol DHCP
 
 Desde el **Administrador del servidor**, se ingresó a la opción `Administrar → Agregar roles y características`.
@@ -49,7 +37,25 @@ Este rol permite que el servidor asigne direcciones IP automáticamente a los eq
 
 Al finalizar la instalación del rol DHCP, se completó la configuración posterior desde la bandera de notificación del Administrador del servidor.
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
+
+1. Desde el panel del **Administrador del servidor**, se selecciona la opción **Administrar** y luego **Agregar roles y características**.
+![D\_Paso\_1](img_rivpat/05_DHCP/D_Paso_1.png)
+
+2. En la sección **Roles del servidor**, se selecciona la opción **Servidor DHCP**.
+![D\_Paso\_2](img_rivpat/05_DHCP/D_Paso_2.png)
+
+3. Se validan las características adicionales que serán incorporadas y se selecciona la opción **Agregar características**.
+![D\_Paso\_3](img_rivpat/05_DHCP/D_Paso_3.png)
+
+4. Se selecciona la opción **Instalar** y se espera a que finalice el proceso de instalación del rol DHCP.
+![D\_Paso\_4](img_rivpat/05_DHCP/D_Paso_4.png)
+
+5. Una vez finalizada la instalación, se selecciona la bandera de notificaciones del **Administrador del servidor** y se ingresa a **Completar configuración de DHCP**.
+![D\_Paso\_5](img_rivpat/05_DHCP/D_Paso_5.png)
+
+6. Se utilizan las credenciales del usuario **Administrador** para autorizar la configuración del servicio DHCP y finalizar el asistente.
+![D\_Paso\_6](img_rivpat/05_DHCP/D_Paso_6.png)
 
 ---
 
@@ -72,43 +78,22 @@ La configuración aplicada fue la siguiente:
 | Servidor DNS      | `192.168.10.10`  |
 | Dominio           | `inacap.local`   |
 
-WIP - Imágenes Paso a Paso
+Paso a Paso:
 
----
+1. Desde el menú **Herramientas**, se selecciona la opción **DHCP** para abrir la consola de administración del servicio.
+![D\_Paso\_7](img_rivpat/05_DHCP/D_Paso_7.png)
 
-## Paso a Paso Activación del ámbito DHCP
+2. Dentro de la consola DHCP, se hace clic derecho sobre la opción **IPv4** y se selecciona **Nuevo ámbito**.
+![D\_Paso\_8](img_rivpat/05_DHCP/D_Paso_8.png)
 
-Después de crear el ámbito, se activó para que el servidor pudiera comenzar a entregar direcciones IP a los equipos clientes.
+3. Se define el nombre del nuevo ámbito DHCP, de acuerdo con la red interna configurada para el laboratorio.
+![D\_Paso\_9](img_rivpat/05_DHCP/D_Paso_9.png)
 
-La activación del ámbito es necesaria porque, aunque el rango esté creado, si no se encuentra activo el cliente no recibirá configuración IP automáticamente.
+4. Se configura el intervalo de direcciones IP que será distribuido automáticamente a los equipos clientes.
+![D\_Paso\_10](img_rivpat/05_DHCP/D_Paso_10.png)
 
-WIP - Imágenes Paso a Paso
-
----
-
-## Paso a Paso Validación desde el cliente
-
-En el equipo cliente `PC01`, se verificó la configuración de red obtenida automáticamente desde el servidor DHCP.
-
-Para esto, se abrió una ventana de comandos y se ejecutó `ipconfig`.
-
-El cliente debe recibir una dirección IP dentro del rango configurado, entre `192.168.10.50 y 192.168.10.100`:
-
-Además, debe utilizar como servidor DNS la IP del servidor `192.168.10.10`:
-
-Si el cliente recibe una dirección `169.254.x.x`, significa que no obtuvo IP desde DHCP, por lo que se debe revisar que ambas máquinas estén conectadas a la misma red interna `redlab` y que el ámbito DHCP esté activo.
-
-WIP - Imágenes Paso a Paso
-
----
-
-## Paso a Paso Prueba de conectividad
-
-Para comprobar la comunicación entre el cliente y el servidor, se ejecutó una prueba de conectividad hacia la IP del servidor, usando `ping 192.168.10.10`:
-
-Esta prueba permite validar que el cliente puede comunicarse correctamente con el servidor dentro de la red interna.
-
-WIP - Imágenes Paso a Paso
+5. Finalmente, se verifica que el ámbito DHCP se encuentre activo, confirmando que la configuración fue completada correctamente.
+![D\_Paso\_11](img_rivpat/05_DHCP/D_Paso_11.png)
 
 ---
 
