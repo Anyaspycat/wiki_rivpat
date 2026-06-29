@@ -5,7 +5,7 @@
 **Asignatura:** TI3V35 — Sistemas Operativos  
 **Unidad:** 2 — Sistema operativo de red: Windows Server  
 **Estudiante:** Patricia Riveros Estay  
-**Proyecto:** `wiki_rivpat`  
+**Proyecto:** `wiki_rivpat`
 
 ---
 
@@ -81,8 +81,24 @@ Implementar y documentar una infraestructura básica de red con Windows Server, 
 
 ```text
 wiki_rivpat/
+├─ docs_rivpat/          # Documentación original del paso a paso en Markdown
+│  ├─ img_rivpat/        
+│  │  ├─ 01_Requisitos/
+│  │  ├─ 02_Instalacion_Configuracion/
+│  │  ├─ 03_ActiveDirectory_DNS/
+│  │  ├─ 04_ObjetosDominio/
+│  │  ├─ 05_DHCP/
+│  │  ├─ 06_Cliente_Dominio/
+│  │  └─ 07_PoliticasGrupo/
+│  ├─ 01_inicio_rivpat.md
+│  ├─ 02_instalacion_rivpat.md
+│  ├─ 03_active_directory_rivpat.md
+│  ├─ 04_cliente_dominio_rivpat.md
+│  ├─ 05_servicios_red_rivpat.md
+│  ├─ 06_gpo_rivpat.md
+│  └─ 07_prompts_rivpat.md
 ├─ public/
-│  └─ img_rivpat/
+│  └─ img_rivpat/        # Imágenes copiadas para visualización en React
 │     ├─ 01_Requisitos/
 │     ├─ 02_Instalacion_Configuracion/
 │     ├─ 03_ActiveDirectory_DNS/
@@ -102,14 +118,6 @@ wiki_rivpat/
 │  ├─ App.jsx
 │  ├─ App.css
 │  └─ main.jsx
-├─ docs_rivpat/
-│  ├─ 01_inicio_rivpat.md
-│  ├─ 02_instalacion_rivpat.md
-│  ├─ 03_active_directory_rivpat.md
-│  ├─ 04_cliente_dominio_rivpat.md
-│  ├─ 05_servicios_red_rivpat.md
-│  ├─ 06_gpo_rivpat.md
-│  └─ 07_prompts_rivpat.md
 ├─ package.json
 └─ README.md
 ```
@@ -118,15 +126,45 @@ wiki_rivpat/
 
 ## Secciones de la wiki
 
-| Sección            | Descripción                                                        |
-| ------------------ | ------------------------------------------------------------------ |
-| Inicio             | Portada, objetivo general, entorno y topología del laboratorio     |
-| Instalación        | Instalación y configuración básica del servidor                    |
-| Active Directory   | Configuración del dominio, OU, usuarios y grupos                   |
+| Sección | Descripción |
+| ------- | ----------- |
+| Inicio | Portada, objetivo general, entorno y topología del laboratorio |
+| Instalación | Instalación y configuración básica del servidor |
+| Active Directory | Configuración del dominio, OU, usuarios y grupos |
 | Cliente al dominio | Creación del cliente, validación de red e incorporación al dominio |
-| DNS y DHCP         | Configuración de servicios de red                                  |
-| GPO                | Creación, edición y validación de políticas de grupo               |
-| Bitácora IA        | Registro de prompts utilizados durante el desarrollo               |
+| DNS y DHCP | Configuración de servicios de red |
+| GPO | Creación, edición y validación de políticas de grupo |
+| Bitácora IA | Registro de prompts utilizados durante el desarrollo |
+
+---
+
+## Documentación y evidencias
+
+La documentación original del paso a paso del laboratorio se encuentra en la carpeta:
+
+```text
+docs_rivpat/
+```
+
+Esta carpeta contiene los archivos Markdown utilizados como base para construir la wiki:
+
+```text
+01_inicio_rivpat.md
+02_instalacion_rivpat.md
+03_active_directory_rivpat.md
+04_cliente_dominio_rivpat.md
+05_servicios_red_rivpat.md
+06_gpo_rivpat.md
+07_prompts_rivpat.md
+```
+
+Las imágenes fueron copiadas a la carpeta:
+
+```text
+public/img_rivpat/
+```
+
+Esta ubicación se utiliza únicamente para que la aplicación React pueda visualizar correctamente las evidencias dentro de la wiki web.
 
 ---
 
@@ -164,28 +202,16 @@ http://localhost:5173
 
 ---
 
-## Evidencias
-
-Las evidencias visuales del laboratorio se encuentran en la carpeta:
-
-```text
-public/img_rivpat/
-```
-
-Cada componente de la wiki utiliza estas imágenes para respaldar los pasos realizados durante la instalación, configuración y validación del entorno.
-
----
-
 ## Uso de inteligencia artificial
 
 Durante el desarrollo del proyecto se utilizaron herramientas de inteligencia artificial como apoyo para:
 
-* Estructurar documentación en formato Markdown.
-* Redactar secciones técnicas de la wiki.
-* Generar componentes React a partir de la documentación.
-* Organizar información en tablas y secciones.
-* Mejorar la presentación visual del proyecto.
-* Registrar una bitácora de prompts utilizados.
+- Estructurar documentación en formato Markdown.
+- Redactar secciones técnicas de la wiki.
+- Generar componentes React a partir de la documentación.
+- Organizar información en tablas y secciones.
+- Mejorar la presentación visual del proyecto.
+- Registrar una bitácora de prompts utilizados.
 
 La sección **Bitácora IA** documenta los prompts principales empleados durante el desarrollo.
 
@@ -199,8 +225,5 @@ El resultado final corresponde a una wiki web funcional que documenta el proceso
 
 ## Autora
 
-**Patricia Riveros Estay**
+**Patricia Riveros Estay**  
 Proyecto académico — Sistemas Operativos
-
-```
-```
