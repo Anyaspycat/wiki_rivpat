@@ -1,0 +1,329 @@
+/* ===== Estilos generales del componente Inicio ===== */
+
+.inicio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Encabezado ===== */
+
+.inicio-header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 3px solid #2c5aa0;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+}
+
+.inicio-titulo {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #1a3a52;
+  font-weight: 700;
+}
+
+.inicio-subtitulo {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #2c5aa0;
+  font-weight: 500;
+}
+
+/* ===== Secciones generales ===== */
+
+.seccion-titulo {
+  font-size: 1.5rem;
+  color: #1a3a52;
+  border-left: 4px solid #2c5aa0;
+  padding-left: 1rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section p {
+  margin: 0.8rem 0;
+  text-align: justify;
+}
+
+/* ===== Datos generales en tarjetas ===== */
+
+.seccion-datos-generales {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.tarjetas-datos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-dato {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #2c5aa0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-dato:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dato-etiqueta {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.dato-valor {
+  font-size: 1rem;
+  color: #1a3a52;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ===== Contenido objetivo ===== */
+
+.seccion-objetivo {
+  background: #f0f4f8;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #2c5aa0;
+}
+
+.contenido-objetivo p {
+  margin: 1rem 0;
+}
+
+.contenido-objetivo strong {
+  color: #1a3a52;
+  font-weight: 600;
+}
+
+/* ===== Descripción del entorno ===== */
+
+.seccion-entorno {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.seccion-entorno code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+/* ===== Tabla de máquinas virtuales ===== */
+
+.tabla-vm {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabla-vm thead {
+  background: #2c5aa0;
+  color: white;
+}
+
+.tabla-vm th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #1a3a52;
+}
+
+.tabla-vm td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-vm tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.tabla-vm code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+/* ===== Topología ===== */
+
+.seccion-topologia {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.topologia-bloque {
+  background: #1a1a1a;
+  color: #00d000;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  line-height: 1.4;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Servicios configurados ===== */
+
+.seccion-servicios {
+  background: #fef9e7;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #f39c12;
+}
+
+.lista-servicios {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.lista-servicios li {
+  margin: 0.7rem 0;
+  color: #333;
+}
+
+/* ===== Tabla de secciones ===== */
+
+.tabla-secciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabla-secciones thead {
+  background: #34495e;
+  color: white;
+}
+
+.tabla-secciones th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.tabla-secciones td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-secciones tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.tabla-secciones tbody tr:hover {
+  background: #ecf0f1;
+}
+
+.tabla-secciones code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #d9534f;
+}
+
+/* ===== Nota de evidencias ===== */
+
+.seccion-evidencias {
+  background: #e8f4f8;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+  margin-top: 2rem;
+}
+
+.nota-evidencias {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.nota-evidencias code {
+  background: #d4eef5;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #16527e;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .inicio-container {
+    padding: 1rem;
+  }
+
+  .inicio-titulo {
+    font-size: 1.8rem;
+  }
+
+  .inicio-subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.2rem;
+  }
+
+  .tarjetas-datos {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla-vm,
+  .tabla-secciones {
+    font-size: 0.9rem;
+  }
+
+  .tabla-vm th,
+  .tabla-vm td,
+  .tabla-secciones th,
+  .tabla-secciones td {
+    padding: 0.6rem;
+  }
+
+  .topologia-bloque {
+    font-size: 0.75rem;
+    padding: 1rem;
+  }
+}
