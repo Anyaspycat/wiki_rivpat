@@ -8,21 +8,21 @@ const Instalacion = () => {
       nombre: 'VirtualBox',
       descripcion: 'Aplicación de virtualización para emular el servidor y cliente',
       enlace: 'https://www.virtualbox.org/wiki/Downloads',
-      imagen: '/img_rivpat/01_Requisitos/VirtualBox_Download.png',
+      imagen: 'img_rivpat/01_Requisitos/VirtualBox_Download.png',
     },
     {
       id: 2,
       nombre: 'Windows Server 2025',
       descripcion: 'Sistema operativo para el servidor principal del laboratorio',
       enlace: 'https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025',
-      imagen: '/img_rivpat/01_Requisitos/WindowsServer_Download.png',
+      imagen: 'img_rivpat/01_Requisitos/WindowsServer_Download.png',
     },
     {
       id: 3,
       nombre: 'Windows 10 Pro',
       descripcion: 'Sistema operativo para la máquina cliente (usando MediaCreationTool_22H2.exe)',
       enlace: 'https://www.microsoft.com/es-es/software-download/windows10',
-      imagen: '/img_rivpat/01_Requisitos/Windows10Pro_Download.png',
+      imagen: 'img_rivpat/01_Requisitos/Windows10Pro_Download.png',
     },
   ];
 
@@ -50,22 +50,22 @@ const Instalacion = () => {
         {
           numero: 1,
           descripcion: 'Se asigna el nombre SRV-DC01 a la máquina virtual y se selecciona la imagen ISO de Windows Server 2025.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_1.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_1.png',
         },
         {
           numero: 2,
           descripcion: 'Se configura la memoria RAM con 4 GB y se asignan 2 núcleos de CPU.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_2.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_2.png',
         },
         {
           numero: 3,
           descripcion: 'Se define un disco duro virtual de 50 GB para la instalación del sistema operativo.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_3.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_3.png',
         },
         {
           numero: 4,
           descripcion: 'Se configura el adaptador de red en modo red interna, utilizando el nombre redlab.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_4.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_4.png',
         },
       ],
     },
@@ -77,33 +77,33 @@ const Instalacion = () => {
         {
           numero: 5,
           descripcion: 'Se inicia la máquina virtual y se configura el idioma, formato de hora y distribución del teclado.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_5.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_5.png',
         },
         {
           numero: 6,
           descripcion: 'Se selecciona la instalación de Windows Server 2025, autorizando la eliminación de archivos existentes.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_6.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_6.png',
         },
         {
           numero: 7,
           descripcion:
             'Se selecciona la edición Standard Evaluation (experiencia de escritorio), que incluye interfaz gráfica.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_7.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_7.png',
         },
         {
           numero: 8,
           descripcion: 'Se selecciona el espacio disponible del disco virtual para instalar el sistema operativo.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_8.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_8.png',
         },
         {
           numero: 9,
           descripcion: 'Se configura la contraseña del usuario local Administrador.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_9.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_9.png',
         },
         {
           numero: 10,
           descripcion: 'Se visualiza la ventana del Administrador del servidor, evidenciando que la instalación se completó.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_10.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_10.png',
         },
       ],
     },
@@ -115,12 +115,12 @@ const Instalacion = () => {
         {
           numero: 11,
           descripcion: 'Desde el Administrador del servidor, se ingresa a Servidor local y se selecciona el nombre actual.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_11.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_11.png',
         },
         {
           numero: 12,
           descripcion: 'Se selecciona la opción para cambiar el nombre del equipo y se establece el nombre SRV-DC01.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_12.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_12.png',
         },
       ],
     },
@@ -132,29 +132,29 @@ const Instalacion = () => {
         {
           numero: 13,
           descripcion: 'Desde Servidor local, se selecciona la opción correspondiente al adaptador de red Ethernet.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_13.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_13.png',
         },
         {
           numero: 14,
           descripcion: 'Se hace clic derecho sobre el adaptador Ethernet y se selecciona Propiedades.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_14.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_14.png',
         },
         {
           numero: 15,
           descripcion:
             'Se selecciona Protocolo de Internet versión 4 (TCP/IPv4) y se ingresa a Propiedades.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_15.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_15.png',
         },
         {
           numero: 16,
           descripcion:
             'Se configuran los parámetros de red: dirección IP, máscara de subred y DNS definidos para el servidor.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_16.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_16.png',
         },
         {
           numero: 17,
           descripcion: 'Se verifica en Servidor local que la dirección IP haya sido modificada correctamente.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_17.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_17.png',
         },
       ],
     },
@@ -166,13 +166,13 @@ const Instalacion = () => {
         {
           numero: 18,
           descripcion: 'Desde el buscador de Windows, se escribe Firewall y se selecciona Firewall de Windows Defender.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_18.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_18.png',
         },
         {
           numero: 19,
           descripcion:
             'Se verifica que el Firewall de Windows se encuentre activo para que posteriormente habilite puertos según servicios.',
-          imagen: '/img_rivpat/02_Instalacion_Configuracion/A_Paso_19.png',
+          imagen: 'img_rivpat/02_Instalacion_Configuracion/A_Paso_19.png',
         },
       ],
     },
